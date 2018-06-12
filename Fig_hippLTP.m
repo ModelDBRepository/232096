@@ -37,8 +37,8 @@ idxLTP = find(((q2_i./q1_i) .* (p2_i./p1_i))>LTPth);
 qscale = mean(q1_i(idxLTP));
 pscale = 1;
 
-q1_i(idxLTP) = q1_i(idxLTP)./qscale;
-q2_i(idxLTP) = q2_i(idxLTP)./qscale;
+q1_i(idxLTP) = q1_i(idxLTP)./qscale; %Here q is normalised 
+q2_i(idxLTP) = q2_i(idxLTP)./qscale; %Here q is normalised 
 p1_i(idxLTP) = p1_i(idxLTP)./pscale;
 p2_i(idxLTP) = p2_i(idxLTP)./pscale;
 
@@ -47,8 +47,8 @@ lr = -0.0001;
 qmin = 0.01;
 pmin = 0.01;
 
-t = 3.4697;
-
+t = 3.4697; 
+%NOTE: The bound is unitless because we start out with normalised q (see above and Methods). However, in the plots we map back to mV for reference
 
 %%
 nrows = 1;

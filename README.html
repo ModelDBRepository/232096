@@ -1,25 +1,25 @@
-<html><pre>
+<html>
+<p>%%<br/>
+%% Readme me file for Statistical long-term synaptic plasticity (statLTSP) code<br/>
+%%<br/>
+%% Reference: <a href="https://doi.org/10.1016/j.neuron.2017.09.021">Costa et al. Neuron, Volume 96, Issue 1, 27 Sept 2017, Pages 177-189</a><br/>
 %%
-%% Readme me file for Statistical statLTSP code
-%%
-%% Reference: Costa et al. Neuron, Volume 96, Issue 7, 27 Sept 2017,
-%% Pages 177-189
-%%
+</p>
+<p>Requirements: This code was tested in Matlab2016b on Mac OS X (but should run on other version)
+</p>
+<ol>
+  <li>Running Fig_hippLTP.m compares the model with the data from hippocampal LTP (see the expected output in Fig_hippLTP_out.png and Figure 2 in the paper):<br/><br/>
+    <img src="./Fig_hippLTP_out.png" alt="Fig_hippLTP_out.png" width="550">
+<br/><br/>
+  </li><li>Running statLTSP_gui.m displays a graphical interface that allows the user to play with the different parameters of the model (it should look like statLTSP_gui_out.png):<br/><br/>
+      <img src="./statLTSP_gui_out.png" alt="statLTSP_gui_out.png" width="550">
+<br/><br/>
+</li></ol>
+<p>Data: All datasets are available on Mendeley Data (see paper for more details)
+</p>
+<p>Important note: In our framework we always work with q normalised (unitless). This is because when comparing with the data we scale q by the mean q in the data (see Methods). However, for the plots we map q back to mV to be easily comparable with observed values. In addition we assume an Euclidean metric (in contrast to a Riemannian metric for example) for the gradient descent, because this was sufficient to match experimental observations.
+</p>
+<p>Note 2: You should be able to easily get the code you need and translate it to other programming languages.</p>
 
-Requirements: This code was tested in Matlab2016b on Mac OS X (but
-should run on other version)
-
-1. Running Fig_hippLTP.m compares the model with the data from
-hippocampal LTP (see the expected output in Fig_hippLTP_out.png and
-Figure 2 in the paper):
-<img src="./Fig_hippLTP_out.png" alt="Fig_hippLTP_out.png" width="550">
-
-2. Running statLTSP_gui.m displays a graphical interface that allows
-the user to play with the different parameters of the model (it should
-look like statLTSP_gui_out.png)
-<img src="./statLTSP_gui_out.png" alt="statLTSP_gui_out.png" width="550">
-
-Data: All datasets are available on Mendeley Data (see paper for more
-details) Note: You should be able to easily get the code you need and
-translate it to other programming languages.
-</pre></html>
+<p/> 20180612 Rui Costa updated this archive to add clarifications to the code and readme.
+</html>

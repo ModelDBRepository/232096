@@ -1,5 +1,9 @@
+
 function varargout = statLTSP_gui(varargin)
 % STATLTSP_GUI MATLAB code for statLTSP_gui.fig
+%
+%      Graphical interface for statLTSP
+%
 %      STATLTSP_GUI, by itself, creates a new STATLTSP_GUI or raises the existing
 %      singleton*.
 %
@@ -86,6 +90,9 @@ function plotSchematic(handles)
         %clear(handles.plot_schematic);
         %set(handles.plot_schematic, 'clear');
         b = str2double(get(handles.bound_box, 'String'));
+        %NOTE: The bound is unitless because we start out with normalised q (see Methods).
+        %      However, here we plot it as mV for ease of comparison with the other figures in the paper.
+
         Prel = max(min(str2double(get(handles.prel_box, 'String')), 0.999), 0.001);
         q = str2double(get(handles.q_box, 'String'));
         
